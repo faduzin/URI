@@ -1,0 +1,40 @@
+#include <stdio.h>
+int main() {
+    int a, m, c;
+    scanf("%d.%d", &m, &c);
+    printf("NOTAS:\n");
+    a=m/100;
+    printf("%d nota(s) de R$ 100.00\n", a);
+    m %= 100;
+    a=m/50;
+    printf("%d nota(s) de R$ 50.00\n", a);
+    m %= 50;
+    a=m/20;
+    printf("%d nota(s) de R$ 20.00\n", a);
+    m %= 20;
+    a=m/10;
+    printf("%d nota(s) de R$ 10.00\n", a);
+    m %= 10;
+    a=m/5;
+    printf("%d nota(s) de R$ 5.00\n", a);
+    m %= 5;
+    a=m/2;
+    printf("%d nota(s) de R$ 2.00\n", a);
+    printf("MOEDAS:\n");
+    m %= 2;
+    printf("%d moeda(s) de R$ 1.00\n", m);
+    a=c/50;
+    printf("%d moeda(s) de R$ 0.50\n", a);
+    c %= 50;
+    a=c/25;
+    printf("%d moeda(s) de R$ 0.25\n", a);
+    c %= 25;
+    a=c/10;
+    printf("%d moeda(s) de R$ 0.10\n", a);
+    c %= 10;
+    a=c/5;
+    printf("%d moeda(s) de R$ 0.05\n", a);
+    c %= 5;
+    printf("%d moeda(s) de R$ 0.01\n", c);
+    return 0;
+}
